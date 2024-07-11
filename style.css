@@ -9,16 +9,13 @@ header{
     flex-direction:row ;
     align-items:end;
     justify-content:space-around;
-    background-color:white;
-    
+    background-color:white;    
 }
 .header__title{
     color:#3b5bdb;
     font-size: 25px;
     font-weight: 600;
     align-items: start;
-    
-
 }
 .header__content{
     display: flex;
@@ -29,18 +26,14 @@ header{
     margin-left: 230px;
     padding-top: 18px;
     padding-bottom:18px;
-
 }
 .header__input--search__input__box{
     background-color:#ebebeb; 
     border: none;
     width: 50%;
     padding: 16px;
-
     border-radius: 8px;
-
-    margin-right: 230px;
-    
+    margin-right: 230px;    
 }
 .form__container{
     display: flex;
@@ -70,7 +63,6 @@ header{
     width: 50%;
     margin-left: 30px;
 }
-
 .form__button--add-task{
     background-color: #3b5bdb;
     color: #ffff;
@@ -84,7 +76,6 @@ header{
     font-weight: 520;
     cursor:pointer;
 }
-
 .form__input-container{
     display: flex;
     justify-content: space-between;
@@ -97,7 +88,6 @@ header{
     padding-bottom: 30px;
 
 }
-
 .tasks__container{
     display: flex;
     flex-direction: column;
@@ -125,7 +115,6 @@ header{
     flex-direction: row;
     justify-content:space-between ;
 }
-
 .task__button--remove-task{
     background-image: url("/assets/trash-icon.svg");
     background-repeat: no-repeat, repeat;
@@ -134,7 +123,6 @@ header{
     border:none;
     cursor:pointer;
 }
-
 .task-type_span-normal{
     height: 10px;
     width: 10px;
@@ -142,7 +130,6 @@ header{
     border-radius: 50%;
     display: inline-block;
     margin-right: 20px;
-
 }
 .task-type_span-important{
     height: 10px;
