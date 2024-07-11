@@ -49,9 +49,6 @@ function createTaskItem(title, type){
   }else{
     span.classList.add("task-type_span-normal");
   }
-
-  // const ul = document.querySelector("ul");
-  // ul.appendChild(li)
   return li;
 }
 createTaskItem(tasks[3].title, tasks[3].type);
