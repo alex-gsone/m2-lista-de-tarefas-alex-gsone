@@ -68,7 +68,6 @@ function createTaskItem(title, type){
 const form = document.querySelector(".form__container")
 const inputName = document.querySelector(".form__input--text__input__box");
 const selected_type = document.querySelector(".form__input--priority__input__box");
-const vector = [];
 
 form.addEventListener("submit", function (event) {
     event.preventDefault();
@@ -81,7 +80,6 @@ form.addEventListener("submit", function (event) {
     ul.innerHTML = '';
 
     tasks.push(new_object);
-    tasks.innerHTML = '';
     renderElements(tasks);
 })
 
