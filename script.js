@@ -77,7 +77,6 @@ form.addEventListener("submit", function (event) {
     // console.log(selected_type.value);
     const new_object = {title:inputName.value, type:selected_type.value}
     // console.log(new_object.length);
-
     const ul = document.querySelector("ul");
     ul.innerHTML = '';
 
