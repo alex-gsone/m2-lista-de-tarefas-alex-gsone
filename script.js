@@ -15,20 +15,20 @@ function renderElements(tasks){
     const ul = document.querySelector("ul");
     let item = [tasks.length];
     for(let i = 0; i < tasks.length; i++){
-        item[i] = createTaskItem(tasks[i].title, tasks[i].type);
+        item[i] = createTaskItem(tasks[i]);
         ul.appendChild(item[i]);
   };
 };
 renderElements(tasks);
 
-function createTaskItem(title, type){
+function createTaskItem(tarefa){
     const li = document.createElement('li');
     const div = document.createElement('div');
     const span = document.createElement('span');
     const p = document.createElement('p');
     const button = document.createElement('button');
 
-    p.textContent = (title);
+    p.textContent = (tarefa.title);
 
     li.appendChild(div);
     div.appendChild(span);
@@ -40,18 +40,18 @@ function createTaskItem(title, type){
     button.classList.add("task__button--remove-task");
     
     li.addEventListener("click", function (event) {
-        let item = {title:title, type:type};
+        let item = {title:tarefa.title, type:tarefa.type};
         for(let i = 0; i < tasks.length; i++){
-            if(tasks[i].title === title){
+            if(tasks[i].title === tarefa.title){
                 tasks.splice(i, 1);
             };
         };
         li.remove();
     });
 
-    if(type==="Urgente"){
+    if(tarefa.type==="Urgente"){
         span.classList.add("task-type_span-urgent");
-    }else if(type==="Importante"){
+    }else if(tarefa.type==="Importante"){
         span.classList.add("task-type_span-important");
     }else{
         span.classList.add("task-type_span-normal");
