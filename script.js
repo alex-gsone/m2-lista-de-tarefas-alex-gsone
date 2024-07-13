@@ -14,13 +14,11 @@ const tasks = [
 function renderElements(tasks){
     const ul = document.querySelector("ul");
     let item = [tasks.length];
-    // console.log(tasks, tasks.length);
-    for(let i = 0; i <tasks.length; i++){
-        // console.log(i, tasks[i]);
+    for(let i = 0; i < tasks.length; i++){
         item[i] = createTaskItem(tasks[i].title, tasks[i].type);
         ul.appendChild(item[i]);
-  }
-}
+  };
+};
 renderElements(tasks);
 
 function createTaskItem(title, type){
@@ -42,15 +40,12 @@ function createTaskItem(title, type){
     button.classList.add("task__button--remove-task");
     
     li.addEventListener("click", function (event) {
-        let item = {title:title, type:type}
-        for(let i = 0; i <tasks.length; i++){
-            // tasks[i].title
-            // console.log(tasks[i].title);
+        let item = {title:title, type:type};
+        for(let i = 0; i < tasks.length; i++){
             if(tasks[i].title === title){
                 tasks.splice(i, 1);
-                console.log('novo tasks:', tasks);
-            }
-        }
+            };
+        };
         li.remove();
     });
 
@@ -60,27 +55,19 @@ function createTaskItem(title, type){
         span.classList.add("task-type_span-important");
     }else{
         span.classList.add("task-type_span-normal");
-    }
-    console.log('novo tasks:', tasks);
+    };
     return li;
-}
+};
 
-const form = document.querySelector(".form__container")
+const form = document.querySelector(".form__container");
 const inputName = document.querySelector(".form__input--text__input__box");
 const selected_type = document.querySelector(".form__input--priority__input__box");
 
-form.addEventListener("submit", function (event) {
+form.addEventListener("submit", function(event) {
     event.preventDefault();
-    
-    // console.log(inputName.value);
-    // console.log(selected_type.value);
     const new_object = {title:inputName.value, type:selected_type.value}
-    // console.log(new_object.length);
     const ul = document.querySelector("ul");
     ul.innerHTML = '';
-
     tasks.push(new_object);
     renderElements(tasks);
-})
-
-
+});
