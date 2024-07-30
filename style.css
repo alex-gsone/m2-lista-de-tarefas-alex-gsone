@@ -3,6 +3,7 @@
 body{
     background-color: #e2e2e2;
     font-family:'Roboto';
+    max-width: 100%;
 
 }
 header{
