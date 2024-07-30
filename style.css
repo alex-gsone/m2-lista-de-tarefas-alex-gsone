@@ -3,13 +3,14 @@
 body{
     background-color: #e2e2e2;
     font-family:'Roboto';
+
 }
 header{
     display: flex;
     flex-direction:row ;
     align-items:end;
     justify-content:space-around;
-    background-color:white;    
+    background-color:white;  
 }
 .header__title{
     color:#3b5bdb;
